@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 4: Page 1</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            padding: 2rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            font-family: inherit;
+            font-size: 1em;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            display: grid;
+            grid-template-columns: 320px auto;
+        }
+        .radio {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Formulir Pendaftaran Siswa</h2>
+    <form style="display: grid; gap: 10px;" action="result.html" method="GET" target="_blank">
+        <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan Nama Lengkap">
+        </div>
+        <div class="form-group">
+            <label for="age">Usia</label>
+            <input type="number" id="age" name="age" placeholder="Masukkan Usia">
+        </div>
+        <div class="form-group">
+            <label for="mail">Email</label>
+            <input type="email" id="mail" name="mail" placeholder="Masukkan Email">
+        </div>
+        <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <div>
+                <input class="radio" type="radio" id="male" name="sex" value="Laki laki">
+                <label style="margin-right: 10px;" for="male">Laki-laki</label>
+                <input class="radio" type="radio" id="female" name="sex" value="Perempuan">
+                <label style="margin-right: 10px;" for="female">Perempuan</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="kelas">Pilih Kelas</label>
+            <select id="kelas" name="kelas">
+                <option value="" selected hidden>-- Pilih Kelas --</option>
+                <option value="Kelas X">Kelas X</option>
+                <option value="Kelas Y">Kelas Y</option>
+                <option value="Kelas Z">Kelas Z</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="address">Alamat</label>
+            <textarea id="address" name="address" placeholder="Masukkan alamat lengkap" rows="4"></textarea>
+        </div>
+        <div style="text-align: center;">
+            <button style="width: min-content; padding-inline: 1rem;" type="submit">Simpan</button>
+        </div>
+    </form>
+</body>
+</html>

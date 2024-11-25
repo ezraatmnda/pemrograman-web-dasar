@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No 3</title>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <span>Menu dan Harga :</span>
+                <ul>
+                    <li>Nasi Goreng : Rp. 25.000</li>
+                    <li>Mie Goreng : Rp. 20.000</li>
+                    <li>Ayam Goreng : Rp. 30.000</li>
+                </ul>
+                <span>Syarat Diskon :</span>
+                <ul>
+                    <li>Diskon 10% jika total lebih dari Rp. 100.000</li>
+                    <li>Diskon 15% jika total lebih dari Rp. 150.000</li>
+                </ul>
+            </div>
+            <hr>
+            <form style="display: grid; gap: 10px;">
+                <span>
+                    <label for="nasi">Jumlah Pesanan Nasi Goreng :</label>
+                    <input type="number" id="nasi" name="nasi">
+                </span>
+                <span>
+                    <label for="mie">Jumlah Pesanan Mie Goreng :</label>
+                    <input type="number" id="mie" name="mie">
+                </span>
+                <span>
+                    <label for="ayam">Jumlah Pesanan Goreng :</label>
+                    <input type="number" id="ayam" name="ayam">
+                </span>
+                <button type="button" onclick="calculate()">Hitung Diskon</button>
+                <span style="font-weight: bold;">Harga Total :</span>
+                <span id="total_before_diskon"></span>
+                <span style="font-weight: bold;">Jumlah Diskon :</span>
+                <span id="total_diskon"></span>
+                <span style="font-weight: bold;">Harga setelah Diskon :</span>
+                <span id="total_after_diskon"></span>
+            </form>
+        </div>
+    </body>
+
+    <script>
+        const calculate = () => {
+            const nasi = document.getElementById("nasi").value;
+            const mie = document.getElementById("mie").value;
+            const ayam = document.getElementById("ayam").value;
+
+            const total_nasi = nasi * 25000;
+            const total_mie = mie * 20000;
+            const total_ayam = ayam * 30000;
+
+            let total_before_diskon = total_nasi + total_mie + total_ayam;
+            let total_diskon = 0;
+
+            if (total_before_diskon >= 150000) {
+                total_diskon = total_before_diskon * 0.15;
+            } else if (total_before_diskon >= 100000) {
+                total_diskon = total_before_diskon * 0.1;
+            }
+
+            document.getElementById("total_before_diskon").innerText = `Rp. ${total_before_diskon.toLocaleString('id-ID')}`;
+            document.getElementById("total_diskon").innerText = `Rp. ${total_diskon.toLocaleString('id-ID')}`;
+            document.getElementById("total_after_diskon").innerText = `Rp. ${(total_before_diskon - total_diskon).toLocaleString('id-ID')}`;
+        }
+    </script>
+</html>

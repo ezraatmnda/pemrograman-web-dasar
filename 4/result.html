@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No 4: Page 2</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            padding: 2rem;
+        }
+        .header {
+            font-weight: bold;
+            width: 30%;
+        }
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+    <body>
+        <h2 style="text-align: center;">Data siswa yang akan didaftarkan</h2>
+        <table>
+            <tr>
+                <td class="header">Nama Lengkap</td>
+                <td id="display-name"></td>
+            </tr>
+            <tr>
+                <td class="header">Usia</td>
+                <td id="display-age"></td>
+            </tr>
+            <tr>
+                <td class="header">Email</td>
+                <td id="display-email"></td>
+            </tr>
+            <tr>
+                <td class="header">Jenis Kelamin</td>
+                <td id="display-sex"></td>
+            </tr>
+            <tr>
+                <td class="header">Kelas</td>
+                <td id="display-kelas"></td>
+            </tr>
+            <tr>
+                <td class="header">Alamat</td>
+                <td id="display-address"></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        window.onload = function () {
+            const params = new URLSearchParams(window.location.search);
+            const name = params.get("name");
+            const age = params.get("age");
+            const email = params.get("mail");
+            const sex = params.get("sex");
+            const kelas = params.get("kelas");
+            const address = params.get("address");
+
+            document.getElementById("display-name").textContent = name;
+            document.getElementById("display-age").textContent = age;
+            document.getElementById("display-email").textContent = email;
+            document.getElementById("display-sex").textContent = sex;
+            document.getElementById("display-kelas").textContent = kelas;
+            document.getElementById("display-address").textContent = address;
+        };
+    </script>
+</html>

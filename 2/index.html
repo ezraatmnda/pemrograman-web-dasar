@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No 2</title>
+        <style>
+            * {
+                font-family: "Montserrat", sans-serif !important;
+            }
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                text-align: center;
+            }
+            th, td {
+                padding: 8px;
+                border: solid 1px #181818;
+            }
+            .red {
+                background-color: #f4cecd;
+            }
+            .yellow {
+                background-color: #fefecf;
+            }
+            .green {
+                background-color: #d8fdce;
+            }
+            .purple {
+                background-color: #cecdfd;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                <tr>
+                    <th class="yellow">Waktu</th>
+                    <th class="red">Senin</th>
+                    <th class="green">Selasa</th>
+                    <th class="purple">Rabu</th>
+                </tr>
+                <tr>
+                    <td class="yellow">07:00 - 08:00</td>
+                    <td rowspan="2" class="red">Matematika</td>
+                    <td class="green">Bahasa Indonesia</td>
+                    <td rowspan="2" class="purple">Fisika</td>
+                </tr>
+                <tr>
+                    <td class="yellow">08:00 - 09:00</td>
+                    <td class="green">Kimia</td>
+                </tr>
+                <tr>
+                    <td class="yellow">09:00 - 10:00</td>
+                    <td class="red">Biologi</td>
+                    <td class="green">Matematika</td>
+                    <td class="purple">Bahasa Inggris</td>
+                </tr>
+                <tr>
+                    <td class="yellow">10:00 - 11:00</td>
+                    <td class="red">Bahasa Inggris</td>
+                    <td colspan="2" class="green">Prakarya</td>
+                </tr>
+                <tr>
+                    <td class="yellow">11:00 - 12:00</td>
+                    <td colspan="3" class="red">Seni Budaya</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="yellow">Istirahat</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
